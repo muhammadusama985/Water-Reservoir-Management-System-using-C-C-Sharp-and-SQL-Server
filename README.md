@@ -6,8 +6,14 @@ The Water Reservoir Management System is a comprehensive application developed i
 
 
 **Stock Management:** Users can easily add and manage the stock of water, keeping track of quantities available for sale.
+
+
 **Sales and Transactions:** The system allows users to store selling bills, record transactions, and keep a detailed history of all sales activities.
+
+
 **Bill Printing:** After a transaction, the system can generate and print a bill, providing a complete record of the sale.
+
+
 **User-Friendly Interface:** The application offers a clean and intuitive interface, making it easy for users to navigate and perform tasks efficiently.
 
 
