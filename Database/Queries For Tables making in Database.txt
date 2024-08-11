@@ -1,0 +1,53 @@
+CREATE TABLE [dbo].[ByPrd] (
+    [id]            INT           IDENTITY (1, 1) NOT NULL,
+    [Supplier_name] VARCHAR (MAX) NULL,
+    [Category]      VARCHAR (MAX) NULL,
+    [Quantity]      VARCHAR (MAX) NULL,
+    [Buy_Price]     VARCHAR (MAX) NULL,
+    [date_insert]   DATE          NULL,
+    [date_update]   DATE          NULL,
+    [date_delete]   DATE          NULL,
+    PRIMARY KEY CLUSTERED ([id] ASC)
+);
+
+CREATE TABLE [dbo].[expenses] (
+    [expense_id]    INT             IDENTITY (1, 1) NOT NULL,
+    [expense_name]  VARCHAR (255)   NULL,
+    [expense_price] DECIMAL (10, 2) NULL,
+    [issue_date]    DATE            NULL,
+    [update_date]   DATE            NULL,
+    PRIMARY KEY CLUSTERED ([expense_id] ASC)
+);
+
+CREATE TABLE [dbo].[SlPrd] (
+    [id]           INT           IDENTITY (1, 1) NOT NULL,
+    [Product_name] VARCHAR (MAX) NULL,
+    [Category]     VARCHAR (MAX) NULL,
+    [Quantity]     VARCHAR (MAX) NULL,
+    [Sell_Price]   VARCHAR (MAX) NULL,
+    [date_insert]  DATE          NULL,
+    [date_update]  DATE          NULL,
+    [date_delete]  DATE          NULL,
+    PRIMARY KEY CLUSTERED ([id] ASC)
+);
+
+CREATE TABLE [dbo].[Transactions] (
+    [TransactionID]   INT             IDENTITY (1, 1) NOT NULL,
+    [CustomerName]    NVARCHAR (100)  NULL,
+    [ProductName]     NVARCHAR (100)  NULL,
+    [Quantity]        INT             NULL,
+    [Price]           DECIMAL (18, 2) NULL,
+    [Total]           DECIMAL (18, 2) NULL,
+    [TransactionDate] DATETIME        DEFAULT (getdate()) NULL,
+    PRIMARY KEY CLUSTERED ([TransactionID] ASC)
+);
+
+CREATE TABLE [dbo].[users] (
+    [id]            INT           IDENTITY (1, 1) NOT NULL,
+    [email]         VARCHAR (MAX) NULL,
+    [username]      VARCHAR (MAX) NULL,
+    [password]      VARCHAR (MAX) NULL,
+    [date_register] DATE          NULL,
+    PRIMARY KEY CLUSTERED ([id] ASC)
+);
+
